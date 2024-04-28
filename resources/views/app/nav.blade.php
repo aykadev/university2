@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('universities.index') }}">Universities</a>
+                    <a class="nav-link" href="{{ route('universities.index') }}">All Universities</a>
                 </li>
             </ul>
         </div>
