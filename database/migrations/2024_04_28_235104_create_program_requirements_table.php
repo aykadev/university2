@@ -16,7 +16,7 @@ return new class extends Migration
             $table->text('name');
             $table->unsignedBigInteger('program_id')->index();
             $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');
-            $table->timestamps();
+            $table->string('program_name');
         });
     }
 
@@ -26,5 +26,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('program_requirements');
+        Schema::dropIfExists('program_requirement_id');
     }
 };

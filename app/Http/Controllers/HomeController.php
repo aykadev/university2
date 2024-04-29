@@ -9,19 +9,19 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $locations = Location::withCount('universities')
+        $locations = Location::withCount('cars')
             ->orderBy('name')
             ->get();
 
-        $programs = Program::with('programRequirements')
-            ->withCount('universities')
+        $brands = Brand::with('brandModels')
+            ->withCount('cars')
             ->orderBy('name')
             ->get();
 
         return view('home.index')
             ->with([
                 'locations' => $locations,
-                'programs' => $programs,
+                'brands' => $brands,
             ]);
     }
 }

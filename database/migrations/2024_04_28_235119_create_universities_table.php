@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('location_id')->index();
+            $table->foreign('location_id')->references('id')->on('locations');
             $table->unsignedBigInteger('program_id')->index();
-            $table->unsignedBigInteger('comment_id')->index();
+            $table->foreign('program_id')->references('id')->on('programs');         
             $table->unsignedBigInteger('program_requirement_id')->index();
-            $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
-            $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');           
-            $table->foreign('program_requirement_id')->references('id')->on('program_requirements')->onDelete('cascade');            
+            $table->foreign('program_requirement_id')->references('id')->on('program_requirements');            
+            $table->unsignedBigInteger('comment_id')->index();            
             $table->foreign('comment_id')->references('id')->on('comments')->onDelete('cascade');
         });
     }

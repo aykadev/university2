@@ -9,11 +9,7 @@
             <label for="location" class="form-label fw-semibold">Location</label>
             <select class="form-select" id="location" name="location">
                 <option value>-</option>
-                @foreach($locations as $location)
-                    <option value="{{ $location->id }}" {{ $location->id == $f_location ? 'selected':'' }}>
-                        {{ $location->name }}
-                    </option>
-                @endforeach
+                
             </select>
         </div>
 
@@ -21,11 +17,7 @@
             <label for="program" class="form-label fw-semibold">Program</label>
             <select class="form-select" id="program" name="program">
                 <option value>-</option>
-                @foreach($Programs as $program)
-                    <option value="{{ $program->id }}" {{ $program->id == $f_program ? 'selected':'' }}>
-                        {{ $program->name }}
-                    </option>
-                @endforeach
+                
             </select>
         </div>
 
@@ -33,13 +25,7 @@
             <label for="programRequirement" class="form-label fw-semibold">Brand Model</label>
             <select class="form-select" id="programRequirement" name="programRequirement">
                 <option value>-</option>
-                @foreach($brands as $brand)
-                    @foreach($brand->programRequirements as $programRequirement)
-                        <option value="{{ $programRequirement->id }}" {{ $programRequirement->id == $f_programRequirement ? 'selected':'' }}>
-                            {{ $brand->name }} / {{ $programRequirement->name }}
-                        </option>
-                    @endforeach
-                @endforeach
+                
             </select>
         </div>
 
