@@ -15,6 +15,8 @@ class Program extends Model
         'id',
     ];
 
+    public $timestamps = false;
+
     public function programRequirements()
     {
         return $this->hasMany(ProgramRequirement::class)

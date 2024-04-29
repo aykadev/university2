@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('program_requirements', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
+            $table->string('name');
             $table->unsignedBigInteger('program_id')->index();
             $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');
-            $table->string('program_name');
         });
     }
 

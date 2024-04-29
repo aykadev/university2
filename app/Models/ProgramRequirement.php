@@ -15,7 +15,7 @@ class ProgramRequirement extends Model
         'id',
     ];
 
-
+    public $timestamps = false;
 
     public function program()
     {
