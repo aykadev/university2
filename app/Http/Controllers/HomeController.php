@@ -14,11 +14,6 @@ class HomeController extends Controller
             ->orderBy('name')
             ->get();
 
-        // $universities = University::with('programs')
-        //     ->withCount('program')
-        //     ->orderBy('name')
-        //     ->get();
-
-        return view('home.index', compact('locations',));
+        return view('home.index');
     }
 }

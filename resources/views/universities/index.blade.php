@@ -17,7 +17,7 @@
             @empty
                 <div class="col">
                     <div class="alert alert-secondary d-flex align-items-center" role="alert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24"><path d="M10.9 14.3l4.6-4.6a1 1 0 0 0-1.4-1.4l-4.6 4.6a1 1 0 0 0 0 1.4zM14.3 10.9l4.6-4.6a1 1 0 1 0-1.4-1.4l-4.6 4.6a1 1 0 0 0 0 1.4zM10.9 7.5l4.6-4.6a1 1 0 0 0-1.4-1.4l-4.6 4.6a1 1 0 0 0 0 1.4z"></svg>
+                        
                         <span class="ms-2">No university found.</span>
                     </div>
                 </div>
